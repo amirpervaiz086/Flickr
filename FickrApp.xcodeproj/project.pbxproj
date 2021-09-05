@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26645571745A9B7F926DB1E2 /* Pods_FickrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5454C7E52F52EABDBEBCADB5 /* Pods_FickrApp.framework */; };
+		5813485726E27ABA002FC58D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813485626E27ABA002FC58D /* Constants.swift */; };
+		5813485826E27ABA002FC58D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813485626E27ABA002FC58D /* Constants.swift */; };
+		5813485E26E31BE6002FC58D /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813485D26E31BE6002FC58D /* StorageProtocol.swift */; };
+		5813485F26E31BE6002FC58D /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813485D26E31BE6002FC58D /* StorageProtocol.swift */; };
+		5813486126E31C99002FC58D /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486026E31C99002FC58D /* DiskStorage.swift */; };
+		5813486226E31C99002FC58D /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486026E31C99002FC58D /* DiskStorage.swift */; };
+		5813486426E31D8F002FC58D /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486326E31D8F002FC58D /* SearchHistory.swift */; };
+		5813486526E31D8F002FC58D /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486326E31D8F002FC58D /* SearchHistory.swift */; };
+		5813486726E3234C002FC58D /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486626E3234C002FC58D /* CodableStorage.swift */; };
+		5813486826E3234C002FC58D /* CodableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486626E3234C002FC58D /* CodableStorage.swift */; };
+		5813486D26E3BB0C002FC58D /* MockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486C26E3BB0C002FC58D /* MockServiceManager.swift */; };
+		5813486F26E3BBBE002FC58D /* FlickrViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813486E26E3BBBE002FC58D /* FlickrViewModelTests.swift */; };
+		5813487126E3BBEA002FC58D /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5813487026E3BBEA002FC58D /* SearchViewModelTests.swift */; };
+		589A2F3426DD1CCD009D3F49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F3326DD1CCD009D3F49 /* AppDelegate.swift */; };
+		589A2F3626DD1CCD009D3F49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F3526DD1CCD009D3F49 /* SceneDelegate.swift */; };
+		589A2F3B26DD1CCD009D3F49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A2F3926DD1CCD009D3F49 /* Main.storyboard */; };
+		589A2F3D26DD1CD0009D3F49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A2F3C26DD1CD0009D3F49 /* Assets.xcassets */; };
+		589A2F4026DD1CD0009D3F49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A2F3E26DD1CD0009D3F49 /* LaunchScreen.storyboard */; };
+		589A2F4B26DD1CD0009D3F49 /* FickrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F4A26DD1CD0009D3F49 /* FickrAppTests.swift */; };
+		589A2F5626DD1CD0009D3F49 /* FickrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F5526DD1CD0009D3F49 /* FickrAppUITests.swift */; };
+		589A2F6526DD1F93009D3F49 /* FlickrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F6426DD1F93009D3F49 /* FlickrViewController.swift */; };
+		589A2F6B26DD2187009D3F49 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F6A26DD2187009D3F49 /* ServiceType.swift */; };
+		589A2F6C26DD2187009D3F49 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F6A26DD2187009D3F49 /* ServiceType.swift */; };
+		589A2F6E26DD219D009D3F49 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F6D26DD219D009D3F49 /* ServiceManager.swift */; };
+		589A2F6F26DD219D009D3F49 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F6D26DD219D009D3F49 /* ServiceManager.swift */; };
+		589A2F7126DD2B80009D3F49 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7026DD2B80009D3F49 /* Route.swift */; };
+		589A2F7226DD2B80009D3F49 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7026DD2B80009D3F49 /* Route.swift */; };
+		589A2F7426DD2BA1009D3F49 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7326DD2BA1009D3F49 /* PhotoCollectionViewCell.swift */; };
+		589A2F7526DD2BA1009D3F49 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7326DD2BA1009D3F49 /* PhotoCollectionViewCell.swift */; };
+		589A2F7726DD2BBB009D3F49 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7626DD2BBB009D3F49 /* LoadingCollectionViewCell.swift */; };
+		589A2F7826DD2BBB009D3F49 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7626DD2BBB009D3F49 /* LoadingCollectionViewCell.swift */; };
+		589A2F7C26DD2BF9009D3F49 /* FlickrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7B26DD2BF9009D3F49 /* FlickrViewModel.swift */; };
+		589A2F7D26DD2BF9009D3F49 /* FlickrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7B26DD2BF9009D3F49 /* FlickrViewModel.swift */; };
+		589A2F8026DD3921009D3F49 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7F26DD3921009D3F49 /* SearchViewController.swift */; };
+		589A2F8126DD3921009D3F49 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F7F26DD3921009D3F49 /* SearchViewController.swift */; };
+		589A2F8326DD3933009D3F49 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8226DD3933009D3F49 /* SearchViewModel.swift */; };
+		589A2F8426DD3933009D3F49 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8226DD3933009D3F49 /* SearchViewModel.swift */; };
+		589A2F8726DD40ED009D3F49 /* FlickrPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8626DD40ED009D3F49 /* FlickrPhotoResponse.swift */; };
+		589A2F8826DD40ED009D3F49 /* FlickrPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8626DD40ED009D3F49 /* FlickrPhotoResponse.swift */; };
+		589A2F8A26DD419B009D3F49 /* FlickrPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8926DD419B009D3F49 /* FlickrPhotos.swift */; };
+		589A2F8B26DD419B009D3F49 /* FlickrPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8926DD419B009D3F49 /* FlickrPhotos.swift */; };
+		589A2F8D26DD4225009D3F49 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8C26DD4225009D3F49 /* Photo.swift */; };
+		589A2F8E26DD4225009D3F49 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A2F8C26DD4225009D3F49 /* Photo.swift */; };
+		7FFA16005C1BAF38F120B4F5 /* Pods_FickrApp_FickrAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5017D371DEBD07DF039B4C6 /* Pods_FickrApp_FickrAppUITests.framework */; };
+		C063E8FD792D89CE91E0E7BE /* Pods_FickrAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A2F77A63F2A1607D6F2AF /* Pods_FickrAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		589A2F4726DD1CD0009D3F49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589A2F2826DD1CCC009D3F49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 589A2F2F26DD1CCC009D3F49;
+			remoteInfo = FickrApp;
+		};
+		589A2F5226DD1CD0009D3F49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 589A2F2826DD1CCC009D3F49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 589A2F2F26DD1CCC009D3F49;
+			remoteInfo = FickrApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09C424A21E4BDD8F82736F3C /* Pods-FickrApp-FickrAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrApp-FickrAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FickrApp-FickrAppUITests/Pods-FickrApp-FickrAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		200D136C454CE5725F43B6E7 /* Pods-FickrAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrAppTests.release.xcconfig"; path = "Target Support Files/Pods-FickrAppTests/Pods-FickrAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		245A2F77A63F2A1607D6F2AF /* Pods_FickrAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FickrAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB58F01614AC20B135DA3B4 /* Pods-FickrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrApp.release.xcconfig"; path = "Target Support Files/Pods-FickrApp/Pods-FickrApp.release.xcconfig"; sourceTree = "<group>"; };
+		4F4BD5C9B7B5B6DF72839079 /* Pods-FickrAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FickrAppTests/Pods-FickrAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5454C7E52F52EABDBEBCADB5 /* Pods_FickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5813485626E27ABA002FC58D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5813485D26E31BE6002FC58D /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		5813486026E31C99002FC58D /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		5813486326E31D8F002FC58D /* SearchHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
+		5813486626E3234C002FC58D /* CodableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableStorage.swift; sourceTree = "<group>"; };
+		5813486C26E3BB0C002FC58D /* MockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceManager.swift; sourceTree = "<group>"; };
+		5813486E26E3BBBE002FC58D /* FlickrViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrViewModelTests.swift; sourceTree = "<group>"; };
+		5813487026E3BBEA002FC58D /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		589A2F3026DD1CCC009D3F49 /* FickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		589A2F3326DD1CCD009D3F49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		589A2F3526DD1CCD009D3F49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		589A2F3A26DD1CCD009D3F49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		589A2F3C26DD1CD0009D3F49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		589A2F3F26DD1CD0009D3F49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		589A2F4126DD1CD0009D3F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589A2F4626DD1CD0009D3F49 /* FickrAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FickrAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		589A2F4A26DD1CD0009D3F49 /* FickrAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FickrAppTests.swift; sourceTree = "<group>"; };
+		589A2F4C26DD1CD0009D3F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589A2F5126DD1CD0009D3F49 /* FickrAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FickrAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		589A2F5526DD1CD0009D3F49 /* FickrAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FickrAppUITests.swift; sourceTree = "<group>"; };
+		589A2F5726DD1CD0009D3F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589A2F6426DD1F93009D3F49 /* FlickrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrViewController.swift; sourceTree = "<group>"; };
+		589A2F6A26DD2187009D3F49 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		589A2F6D26DD219D009D3F49 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		589A2F7026DD2B80009D3F49 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		589A2F7326DD2BA1009D3F49 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		589A2F7626DD2BBB009D3F49 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
+		589A2F7B26DD2BF9009D3F49 /* FlickrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrViewModel.swift; sourceTree = "<group>"; };
+		589A2F7F26DD3921009D3F49 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		589A2F8226DD3933009D3F49 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		589A2F8626DD40ED009D3F49 /* FlickrPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoResponse.swift; sourceTree = "<group>"; };
+		589A2F8926DD419B009D3F49 /* FlickrPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotos.swift; sourceTree = "<group>"; };
+		589A2F8C26DD4225009D3F49 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C604F056F07A30E7955CF9CB /* Pods-FickrApp-FickrAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrApp-FickrAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FickrApp-FickrAppUITests/Pods-FickrApp-FickrAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E285F30BFAB0F30BDE1294A6 /* Pods-FickrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FickrApp.debug.xcconfig"; path = "Target Support Files/Pods-FickrApp/Pods-FickrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F5017D371DEBD07DF039B4C6 /* Pods_FickrApp_FickrAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FickrApp_FickrAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		589A2F2D26DD1CCC009D3F49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26645571745A9B7F926DB1E2 /* Pods_FickrApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4326DD1CD0009D3F49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C063E8FD792D89CE91E0E7BE /* Pods_FickrAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4E26DD1CD0009D3F49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FFA16005C1BAF38F120B4F5 /* Pods_FickrApp_FickrAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410B969116D7263C03CF7706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5454C7E52F52EABDBEBCADB5 /* Pods_FickrApp.framework */,
+				F5017D371DEBD07DF039B4C6 /* Pods_FickrApp_FickrAppUITests.framework */,
+				245A2F77A63F2A1607D6F2AF /* Pods_FickrAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5813485C26E3182E002FC58D /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5813485D26E31BE6002FC58D /* StorageProtocol.swift */,
+				5813486026E31C99002FC58D /* DiskStorage.swift */,
+				5813486626E3234C002FC58D /* CodableStorage.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		589A2F2726DD1CCC009D3F49 = {
+			isa = PBXGroup;
+			children = (
+				589A2F3226DD1CCC009D3F49 /* FickrApp */,
+				589A2F4926DD1CD0009D3F49 /* FickrAppTests */,
+				589A2F5426DD1CD0009D3F49 /* FickrAppUITests */,
+				589A2F3126DD1CCC009D3F49 /* Products */,
+				9EE4B1DA4BF876AFF13CC320 /* Pods */,
+				410B969116D7263C03CF7706 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		589A2F3126DD1CCC009D3F49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F3026DD1CCC009D3F49 /* FickrApp.app */,
+				589A2F4626DD1CD0009D3F49 /* FickrAppTests.xctest */,
+				589A2F5126DD1CD0009D3F49 /* FickrAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		589A2F3226DD1CCC009D3F49 /* FickrApp */ = {
+			isa = PBXGroup;
+			children = (
+				5813485C26E3182E002FC58D /* Cache */,
+				589A2F8526DD3952009D3F49 /* Model */,
+				589A2F7E26DD2C0D009D3F49 /* SearchViewController */,
+				589A2F6926DD215F009D3F49 /* ServiceManager */,
+				589A2F6326DD1F21009D3F49 /* FlickrViewController */,
+				589A2F3326DD1CCD009D3F49 /* AppDelegate.swift */,
+				589A2F3526DD1CCD009D3F49 /* SceneDelegate.swift */,
+				589A2F3926DD1CCD009D3F49 /* Main.storyboard */,
+				589A2F3C26DD1CD0009D3F49 /* Assets.xcassets */,
+				589A2F3E26DD1CD0009D3F49 /* LaunchScreen.storyboard */,
+				589A2F4126DD1CD0009D3F49 /* Info.plist */,
+			);
+			path = FickrApp;
+			sourceTree = "<group>";
+		};
+		589A2F4926DD1CD0009D3F49 /* FickrAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F4A26DD1CD0009D3F49 /* FickrAppTests.swift */,
+				589A2F4C26DD1CD0009D3F49 /* Info.plist */,
+				5813486C26E3BB0C002FC58D /* MockServiceManager.swift */,
+				5813486E26E3BBBE002FC58D /* FlickrViewModelTests.swift */,
+				5813487026E3BBEA002FC58D /* SearchViewModelTests.swift */,
+			);
+			path = FickrAppTests;
+			sourceTree = "<group>";
+		};
+		589A2F5426DD1CD0009D3F49 /* FickrAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F5526DD1CD0009D3F49 /* FickrAppUITests.swift */,
+				589A2F5726DD1CD0009D3F49 /* Info.plist */,
+			);
+			path = FickrAppUITests;
+			sourceTree = "<group>";
+		};
+		589A2F6326DD1F21009D3F49 /* FlickrViewController */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F7A26DD2BDB009D3F49 /* ViewModel */,
+				589A2F6426DD1F93009D3F49 /* FlickrViewController.swift */,
+				589A2F7326DD2BA1009D3F49 /* PhotoCollectionViewCell.swift */,
+				589A2F7626DD2BBB009D3F49 /* LoadingCollectionViewCell.swift */,
+			);
+			path = FlickrViewController;
+			sourceTree = "<group>";
+		};
+		589A2F6926DD215F009D3F49 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F6A26DD2187009D3F49 /* ServiceType.swift */,
+				589A2F6D26DD219D009D3F49 /* ServiceManager.swift */,
+				589A2F7026DD2B80009D3F49 /* Route.swift */,
+				5813485626E27ABA002FC58D /* Constants.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		589A2F7A26DD2BDB009D3F49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F7B26DD2BF9009D3F49 /* FlickrViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		589A2F7E26DD2C0D009D3F49 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F9126DFCF6E009D3F49 /* ViewModel */,
+				589A2F7F26DD3921009D3F49 /* SearchViewController.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		589A2F8526DD3952009D3F49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F8626DD40ED009D3F49 /* FlickrPhotoResponse.swift */,
+				589A2F8926DD419B009D3F49 /* FlickrPhotos.swift */,
+				589A2F8C26DD4225009D3F49 /* Photo.swift */,
+				5813486326E31D8F002FC58D /* SearchHistory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		589A2F9126DFCF6E009D3F49 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				589A2F8226DD3933009D3F49 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9EE4B1DA4BF876AFF13CC320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E285F30BFAB0F30BDE1294A6 /* Pods-FickrApp.debug.xcconfig */,
+				4EB58F01614AC20B135DA3B4 /* Pods-FickrApp.release.xcconfig */,
+				C604F056F07A30E7955CF9CB /* Pods-FickrApp-FickrAppUITests.debug.xcconfig */,
+				09C424A21E4BDD8F82736F3C /* Pods-FickrApp-FickrAppUITests.release.xcconfig */,
+				4F4BD5C9B7B5B6DF72839079 /* Pods-FickrAppTests.debug.xcconfig */,
+				200D136C454CE5725F43B6E7 /* Pods-FickrAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		589A2F2F26DD1CCC009D3F49 /* FickrApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589A2F5A26DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrApp" */;
+			buildPhases = (
+				37DD5E7C06541A4323AEACEA /* [CP] Check Pods Manifest.lock */,
+				589A2F2C26DD1CCC009D3F49 /* Sources */,
+				589A2F2D26DD1CCC009D3F49 /* Frameworks */,
+				589A2F2E26DD1CCC009D3F49 /* Resources */,
+				8BDE91B88E66821E377DBB6D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FickrApp;
+			productName = FickrApp;
+			productReference = 589A2F3026DD1CCC009D3F49 /* FickrApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		589A2F4526DD1CD0009D3F49 /* FickrAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589A2F5D26DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrAppTests" */;
+			buildPhases = (
+				71AE0B9B7D62724A42361485 /* [CP] Check Pods Manifest.lock */,
+				589A2F4226DD1CD0009D3F49 /* Sources */,
+				589A2F4326DD1CD0009D3F49 /* Frameworks */,
+				589A2F4426DD1CD0009D3F49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				589A2F4826DD1CD0009D3F49 /* PBXTargetDependency */,
+			);
+			name = FickrAppTests;
+			productName = FickrAppTests;
+			productReference = 589A2F4626DD1CD0009D3F49 /* FickrAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		589A2F5026DD1CD0009D3F49 /* FickrAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 589A2F6026DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrAppUITests" */;
+			buildPhases = (
+				E589DC25563AA492338A1DAB /* [CP] Check Pods Manifest.lock */,
+				589A2F4D26DD1CD0009D3F49 /* Sources */,
+				589A2F4E26DD1CD0009D3F49 /* Frameworks */,
+				589A2F4F26DD1CD0009D3F49 /* Resources */,
+				F4CAF6312F483C8B42678BD1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				589A2F5326DD1CD0009D3F49 /* PBXTargetDependency */,
+			);
+			name = FickrAppUITests;
+			productName = FickrAppUITests;
+			productReference = 589A2F5126DD1CD0009D3F49 /* FickrAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		589A2F2826DD1CCC009D3F49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					589A2F2F26DD1CCC009D3F49 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					589A2F4526DD1CD0009D3F49 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 589A2F2F26DD1CCC009D3F49;
+					};
+					589A2F5026DD1CD0009D3F49 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 589A2F2F26DD1CCC009D3F49;
+					};
+				};
+			};
+			buildConfigurationList = 589A2F2B26DD1CCC009D3F49 /* Build configuration list for PBXProject "FickrApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 589A2F2726DD1CCC009D3F49;
+			productRefGroup = 589A2F3126DD1CCC009D3F49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				589A2F2F26DD1CCC009D3F49 /* FickrApp */,
+				589A2F4526DD1CD0009D3F49 /* FickrAppTests */,
+				589A2F5026DD1CD0009D3F49 /* FickrAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		589A2F2E26DD1CCC009D3F49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589A2F4026DD1CD0009D3F49 /* LaunchScreen.storyboard in Resources */,
+				589A2F3D26DD1CD0009D3F49 /* Assets.xcassets in Resources */,
+				589A2F3B26DD1CCD009D3F49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4426DD1CD0009D3F49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4F26DD1CD0009D3F49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37DD5E7C06541A4323AEACEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FickrApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71AE0B9B7D62724A42361485 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FickrAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDE91B88E66821E377DBB6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FickrApp/Pods-FickrApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FickrApp/Pods-FickrApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FickrApp/Pods-FickrApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E589DC25563AA492338A1DAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FickrApp-FickrAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CAF6312F483C8B42678BD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FickrApp-FickrAppUITests/Pods-FickrApp-FickrAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FickrApp-FickrAppUITests/Pods-FickrApp-FickrAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FickrApp-FickrAppUITests/Pods-FickrApp-FickrAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		589A2F2C26DD1CCC009D3F49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589A2F7C26DD2BF9009D3F49 /* FlickrViewModel.swift in Sources */,
+				589A2F8A26DD419B009D3F49 /* FlickrPhotos.swift in Sources */,
+				589A2F7726DD2BBB009D3F49 /* LoadingCollectionViewCell.swift in Sources */,
+				589A2F8D26DD4225009D3F49 /* Photo.swift in Sources */,
+				589A2F8326DD3933009D3F49 /* SearchViewModel.swift in Sources */,
+				589A2F3426DD1CCD009D3F49 /* AppDelegate.swift in Sources */,
+				5813485726E27ABA002FC58D /* Constants.swift in Sources */,
+				589A2F3626DD1CCD009D3F49 /* SceneDelegate.swift in Sources */,
+				5813486426E31D8F002FC58D /* SearchHistory.swift in Sources */,
+				589A2F6526DD1F93009D3F49 /* FlickrViewController.swift in Sources */,
+				589A2F8026DD3921009D3F49 /* SearchViewController.swift in Sources */,
+				5813485E26E31BE6002FC58D /* StorageProtocol.swift in Sources */,
+				589A2F7426DD2BA1009D3F49 /* PhotoCollectionViewCell.swift in Sources */,
+				589A2F7126DD2B80009D3F49 /* Route.swift in Sources */,
+				5813486726E3234C002FC58D /* CodableStorage.swift in Sources */,
+				589A2F6E26DD219D009D3F49 /* ServiceManager.swift in Sources */,
+				5813486126E31C99002FC58D /* DiskStorage.swift in Sources */,
+				589A2F8726DD40ED009D3F49 /* FlickrPhotoResponse.swift in Sources */,
+				589A2F6B26DD2187009D3F49 /* ServiceType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4226DD1CD0009D3F49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589A2F4B26DD1CD0009D3F49 /* FickrAppTests.swift in Sources */,
+				5813486D26E3BB0C002FC58D /* MockServiceManager.swift in Sources */,
+				589A2F6C26DD2187009D3F49 /* ServiceType.swift in Sources */,
+				589A2F8126DD3921009D3F49 /* SearchViewController.swift in Sources */,
+				589A2F7226DD2B80009D3F49 /* Route.swift in Sources */,
+				589A2F8B26DD419B009D3F49 /* FlickrPhotos.swift in Sources */,
+				5813487126E3BBEA002FC58D /* SearchViewModelTests.swift in Sources */,
+				589A2F6F26DD219D009D3F49 /* ServiceManager.swift in Sources */,
+				5813485F26E31BE6002FC58D /* StorageProtocol.swift in Sources */,
+				589A2F8E26DD4225009D3F49 /* Photo.swift in Sources */,
+				5813485826E27ABA002FC58D /* Constants.swift in Sources */,
+				5813486826E3234C002FC58D /* CodableStorage.swift in Sources */,
+				589A2F8826DD40ED009D3F49 /* FlickrPhotoResponse.swift in Sources */,
+				589A2F8426DD3933009D3F49 /* SearchViewModel.swift in Sources */,
+				5813486226E31C99002FC58D /* DiskStorage.swift in Sources */,
+				589A2F7526DD2BA1009D3F49 /* PhotoCollectionViewCell.swift in Sources */,
+				5813486F26E3BBBE002FC58D /* FlickrViewModelTests.swift in Sources */,
+				5813486526E31D8F002FC58D /* SearchHistory.swift in Sources */,
+				589A2F7826DD2BBB009D3F49 /* LoadingCollectionViewCell.swift in Sources */,
+				589A2F7D26DD2BF9009D3F49 /* FlickrViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		589A2F4D26DD1CD0009D3F49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589A2F5626DD1CD0009D3F49 /* FickrAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		589A2F4826DD1CD0009D3F49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 589A2F2F26DD1CCC009D3F49 /* FickrApp */;
+			targetProxy = 589A2F4726DD1CD0009D3F49 /* PBXContainerItemProxy */;
+		};
+		589A2F5326DD1CD0009D3F49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 589A2F2F26DD1CCC009D3F49 /* FickrApp */;
+			targetProxy = 589A2F5226DD1CD0009D3F49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		589A2F3926DD1CCD009D3F49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				589A2F3A26DD1CCD009D3F49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		589A2F3E26DD1CD0009D3F49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				589A2F3F26DD1CD0009D3F49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		589A2F5826DD1CD1009D3F49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		589A2F5926DD1CD1009D3F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		589A2F5B26DD1CD1009D3F49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E285F30BFAB0F30BDE1294A6 /* Pods-FickrApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59XN86W4BV;
+				INFOPLIST_FILE = FickrApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		589A2F5C26DD1CD1009D3F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EB58F01614AC20B135DA3B4 /* Pods-FickrApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59XN86W4BV;
+				INFOPLIST_FILE = FickrApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		589A2F5E26DD1CD1009D3F49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4BD5C9B7B5B6DF72839079 /* Pods-FickrAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59XN86W4BV;
+				INFOPLIST_FILE = FickrAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FickrApp.app/FickrApp";
+			};
+			name = Debug;
+		};
+		589A2F5F26DD1CD1009D3F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 200D136C454CE5725F43B6E7 /* Pods-FickrAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59XN86W4BV;
+				INFOPLIST_FILE = FickrAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FickrApp.app/FickrApp";
+			};
+			name = Release;
+		};
+		589A2F6126DD1CD1009D3F49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C604F056F07A30E7955CF9CB /* Pods-FickrApp-FickrAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FickrAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FickrApp;
+			};
+			name = Debug;
+		};
+		589A2F6226DD1CD1009D3F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C424A21E4BDD8F82736F3C /* Pods-FickrApp-FickrAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FickrAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Qi.test.FickrAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FickrApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		589A2F2B26DD1CCC009D3F49 /* Build configuration list for PBXProject "FickrApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589A2F5826DD1CD1009D3F49 /* Debug */,
+				589A2F5926DD1CD1009D3F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589A2F5A26DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589A2F5B26DD1CD1009D3F49 /* Debug */,
+				589A2F5C26DD1CD1009D3F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589A2F5D26DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589A2F5E26DD1CD1009D3F49 /* Debug */,
+				589A2F5F26DD1CD1009D3F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		589A2F6026DD1CD1009D3F49 /* Build configuration list for PBXNativeTarget "FickrAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				589A2F6126DD1CD1009D3F49 /* Debug */,
+				589A2F6226DD1CD1009D3F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 589A2F2826DD1CCC009D3F49 /* Project object */;
+}

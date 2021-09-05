@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9cS-mC-lvJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nlj-mr-nXC">
+            <objects>
+                <navigationController id="9cS-mC-lvJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7p1-OK-ZKK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C7O-Dc-5dh" kind="relationship" relationship="rootViewController" id="Fg5-DF-IUq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cso-9V-acp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365" y="145"/>
+        </scene>
+        <!--Flickr Photos-->
+        <scene sceneID="pCK-tA-h1f">
+            <objects>
+                <collectionViewController title="Flickr Photos" id="C7O-Dc-5dh" customClass="FlickrViewController" customModule="FickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U67-iO-Q0y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rEC-eH-tqR">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="dni-WF-Z13">
+                            <rect key="frame" x="0.0" y="-88" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoaderCell" id="oj4-sC-Apt" customClass="LoadingCollectionViewCell" customModule="FickrApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ujg-Fp-7Kr">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-xC-qN8">
+                                            <rect key="frame" x="45.5" y="45.5" width="37" height="37"/>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rSO-xC-qN8" firstAttribute="centerY" secondItem="ujg-Fp-7Kr" secondAttribute="centerY" id="CCX-TK-E38"/>
+                                        <constraint firstItem="rSO-xC-qN8" firstAttribute="centerX" secondItem="ujg-Fp-7Kr" secondAttribute="centerX" id="iXO-vD-eP2"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="indicatorView" destination="rSO-xC-qN8" id="Hfy-ci-SLa"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="vhD-jO-MC4" customClass="PhotoCollectionViewCell" customModule="FickrApp" customModuleProvider="target">
+                                <rect key="frame" x="276" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N8g-eI-XF4">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G1z-Wr-8Qr">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="G1z-Wr-8Qr" firstAttribute="top" secondItem="N8g-eI-XF4" secondAttribute="top" id="Ed9-SI-Cia"/>
+                                        <constraint firstItem="G1z-Wr-8Qr" firstAttribute="centerY" secondItem="N8g-eI-XF4" secondAttribute="centerY" id="mZ0-kD-xzh"/>
+                                        <constraint firstItem="G1z-Wr-8Qr" firstAttribute="leading" secondItem="N8g-eI-XF4" secondAttribute="leading" id="tzI-Cu-Drd"/>
+                                        <constraint firstItem="G1z-Wr-8Qr" firstAttribute="centerX" secondItem="N8g-eI-XF4" secondAttribute="centerX" id="vob-PO-SIc"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="flickrImageView" destination="G1z-Wr-8Qr" id="PQJ-5v-qkd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="C7O-Dc-5dh" id="Lw7-4y-wB6"/>
+                            <outlet property="delegate" destination="C7O-Dc-5dh" id="jNw-ZE-I8F"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="NUq-Jk-3qf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="bFf-bz-hr3">
+                            <connections>
+                                <segue destination="9zv-QL-hUL" kind="show" id="z8h-dp-Dii"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="indicatorView" destination="dni-WF-Z13" id="zBg-Cc-xui"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnF-dJ-Oh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="145"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="jtq-j2-aK8">
+            <objects>
+                <viewController id="9zv-QL-hUL" customClass="SearchViewController" customModule="FickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGz-oz-haL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Please enter keyword" translatesAutoresizingMaskIntoConstraints="NO" id="qZ2-9R-zB0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zeP-Gb-hb2"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9zv-QL-hUL" id="9gS-Lq-9ei"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-Xq-0bH">
+                                <rect key="frame" x="0.0" y="132" width="414" height="745"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9zv-QL-hUL" id="81c-IW-rhN"/>
+                                    <outlet property="delegate" destination="9zv-QL-hUL" id="V7S-Oy-kMP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HDd-ll-6pq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="cJF-Xq-0bH" secondAttribute="bottom" constant="-15" id="99u-cR-fyh"/>
+                            <constraint firstItem="cJF-Xq-0bH" firstAttribute="top" secondItem="qZ2-9R-zB0" secondAttribute="bottom" id="QBu-i0-t9X"/>
+                            <constraint firstItem="qZ2-9R-zB0" firstAttribute="centerX" secondItem="cGz-oz-haL" secondAttribute="centerX" id="TAn-uH-Gja"/>
+                            <constraint firstItem="qZ2-9R-zB0" firstAttribute="trailing" secondItem="cJF-Xq-0bH" secondAttribute="trailing" id="WhR-cf-QIe"/>
+                            <constraint firstItem="qZ2-9R-zB0" firstAttribute="leading" secondItem="cJF-Xq-0bH" secondAttribute="leading" id="gxc-Hq-SQ4"/>
+                            <constraint firstItem="qZ2-9R-zB0" firstAttribute="leading" secondItem="HDd-ll-6pq" secondAttribute="leading" id="o1T-Yf-8q6"/>
+                            <constraint firstItem="qZ2-9R-zB0" firstAttribute="top" secondItem="HDd-ll-6pq" secondAttribute="top" id="oa2-L0-BzK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f1H-YA-3ad"/>
+                    <connections>
+                        <outlet property="searchBar" destination="qZ2-9R-zB0" id="dag-UL-uLb"/>
+                        <outlet property="tableView" destination="cJF-Xq-0bH" id="6qz-r9-4SI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci0-DP-6n3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.6956521739132" y="148.66071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
